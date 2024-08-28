@@ -3,13 +3,16 @@
 
 <html>
     <body>
-        <div id="root"></div>
         <script type="module">
-            const div = document.createElement('div')
-            div.textContent = 'Hello World'
-            div.className = 'container'
+            const element = document.createElement('div')
+            element.textContent = 'Hello World'
+            element.className = 'container'
 
-            document.getElementById('root').append(div)
+            const root = document.createElement('div')
+            root.id = 'root'
+            root.append(element)
+
+            document.body.append(root)
         </script>
     </body>
 </html>
