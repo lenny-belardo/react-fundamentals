@@ -10,11 +10,16 @@
   <script type="module">
     const rootElement = document.getElementById('root')
     const elementProps = {
-      className: 'container',
-      children: 'Hello World'
+      className: 'container'
     }
     const elementType = 'div'
-    const reactElement = React.createElement(elementType, elementProps)
+    const reactElement = React.createElement(
+      elementType,
+      elementProps,
+      React.createElement('span', {}, 'Hello'),
+      ' ',
+      React.createElement('span', {}, 'World')
+    )
     const root = ReactDOM.createRoot(rootElement)
     root.render(reactElement)
   </script>
