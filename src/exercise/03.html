@@ -9,9 +9,10 @@
 
   <script type="text/babel">
 
-
+    const className = 'container'
+    const children = 'Hello World'
     const element = (
-      <div className="container">Hello World</div>
+      <div className={className}>{children}</div>
     )
     ReactDOM.createRoot(document.getElementById('root')).render(element)
   </script>
